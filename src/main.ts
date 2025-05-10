@@ -5,6 +5,7 @@ import {
   axesHelper,
   hoveringCubeScene,
   renderingLines,
+  renderingMultipleLines,
   renderingText,
 } from "./tutorials/index.ts";
 
@@ -17,11 +18,12 @@ const scenes = {
   RENDERING_TEXT: renderingText(),
   RENDERING_LINES: renderingLines(),
   AXES_HELPER: axesHelper(),
+  RENDERING_MULTIPLE_LINES: renderingMultipleLines(),
 };
 
 if (WebGL.isWebGL2Available()) {
   // Initiate function or other initializations here
-  root.appendChild(scenes.AXES_HELPER);
+  root.appendChild(scenes.RENDERING_MULTIPLE_LINES);
 } else {
   const warning = WebGL.getWebGL2ErrorMessage();
 
