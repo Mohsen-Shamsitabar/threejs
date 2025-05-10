@@ -36,7 +36,7 @@ const renderingLines = () => {
   const renderer = new THREE.WebGLRenderer();
 
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement); // Make sure it's added to the DOM
+  document.body.appendChild(renderer.domElement);
 
   const mainLoop = () => {
     renderer.render(scene, camera);
